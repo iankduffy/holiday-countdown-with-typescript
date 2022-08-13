@@ -16,7 +16,7 @@ const getMinutes = (difference: Number) => Math.floor((difference / 1000 / 60) %
 const getSeconds = (difference: Number) => Math.floor((difference / 1000) % 60)
 
 const useCountDown = (date: string) => {
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>({
+  const [timeLeft, setTimeLeft] = useState<TimeLeft | null>({
     days: '00',
     hours: '00',
     minutes: '00',
@@ -40,9 +40,9 @@ const useCountDown = (date: string) => {
   };
 
   useEffect(() => {
-    setTimeLeft(calculateTimeLeft())
+    setTimeLeft(calculateTimeLeft() as TimeLeft)
     const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft())
+      setTimeLeft(calculateTimeLeft() as TimeLeft)
     }, 1000)
     return () => {
       clearInterval(timer)

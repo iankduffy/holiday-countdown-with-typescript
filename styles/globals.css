@@ -29,3 +29,6 @@ a {
   }
 }
 
+.countdown {
+  font-size: clamp(4.5rem, -0.575rem + 8.333vw, 20.5rem)
+}

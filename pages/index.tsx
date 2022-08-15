@@ -1,15 +1,21 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import useCountDown from '../hooks/useCountdown'
+import Countdown from 'components/countdown'
+import HeroImage from 'components/heroImage'
 
 const Home: NextPage = () => {
-  const { days, hours, minutes, seconds } = useCountDown('10-13-2022')
+  const holidayDate = '10-13-2022'
 
   return (
-    <h1 className="text-7xl font-bold underline">
-      {days}:{hours}:{minutes}:{seconds}
-    </h1>
+    <div className="relative">
+      <Head>
+        <title>Countdown to Holiday | Gran Canaria</title>
+      </Head>
+      <HeroImage >
+        <Countdown date={holidayDate}/>
+      </HeroImage>
+    </div>
   )
 }
 

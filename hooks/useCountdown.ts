@@ -1,19 +1,19 @@
 import { useState, useEffect } from 'react'
 
 interface TimeLeft {
-  days: number | '00'
-  hours: number | '00'
-  minutes: number | '00'
-  seconds: number | '00'
+  days: string
+  hours: string
+  minutes: string
+  seconds: string
 }
 
-const getDays = (difference: Number) => Math.floor(difference / (1000 * 60 * 60 * 24))
+const getDays = (difference: number) => String(Math.floor(difference / (1000 * 60 * 60 * 24))).padStart(2, '0')
 
-const getHours = (difference: Number) => Math.floor((difference / (1000 * 60 * 60)) % 24)
+const getHours = (difference: number) => String(Math.floor((difference / (1000 * 60 * 60)) % 24)).padStart(2, '0')
 
-const getMinutes = (difference: Number) => Math.floor((difference / 1000 / 60) % 60)
+const getMinutes = (difference: number) => String(Math.floor((difference / 1000 / 60) % 60)).padStart(2, '0')
 
-const getSeconds = (difference: Number) => Math.floor((difference / 1000) % 60)
+const getSeconds = (difference: number) => String(Math.floor((difference / 1000) % 60)).padStart(2, '0')
 
 const useCountDown = (date: string) => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft | null>({
@@ -24,7 +24,7 @@ const useCountDown = (date: string) => {
   })
 
   const calculateTimeLeft = () => {
-    const difference : Number = Number(new Date(date)) - Number(new Date());
+    const difference : number = new Date(date).getTime() - new Date().getTime();
     let timeLeft = {};
 
     if (difference > 0) {
@@ -47,7 +47,7 @@ const useCountDown = (date: string) => {
     return () => {
       clearInterval(timer)
     }
-  }, [])
+  }, [ ])
 
   return timeLeft;
 }

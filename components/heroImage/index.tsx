@@ -6,14 +6,14 @@ interface Props {
 
 const HeroImage = ({children}: Props) : JSX.Element => {
   return (
-    <div className='h-screen'>
+    <div className='h-screen relative'>
       <Image
         src={'/holiday-pic.jpeg'}
         layout='fill'
         className='object-cover blur-sm scale-105'
         alt="Holiday"
       />
-      <div className='z-10 font-bold absolute h-full w-full text-center items-center justify-center flex flex-col'>
+      <div className='z-10 font-bold absolute h-full w-full text-center items-center justify-center flex flex-col text-slate-50'>
         {children}
       </div>
     </div>

@@ -1,4 +1,5 @@
-import useCountDown from 'hooks/useCountdown'
+import useCountDown, { TimeLeft } from 'hooks/useCountdown'
+
 
 interface Props {
   date: string

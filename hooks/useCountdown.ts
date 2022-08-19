@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-interface TimeLeft {
+export interface TimeLeft {
   days: string
   hours: string
   minutes: string
@@ -16,7 +16,7 @@ const getMinutes = (difference: number) => String(Math.floor((difference / 1000 
 const getSeconds = (difference: number) => String(Math.floor((difference / 1000) % 60)).padStart(2, '0')
 
 const useCountDown = (date: string) => {
-  const [timeLeft, setTimeLeft] = useState<TimeLeft | null>({
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     days: '00',
     hours: '00',
     minutes: '00',

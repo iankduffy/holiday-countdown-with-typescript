@@ -5,7 +5,6 @@ interface Props {
 }
 
 const HeroImage = ({children}: Props) : JSX.Element => {
-
   return (
     <div className='h-screen'>
       <Image
@@ -14,7 +13,7 @@ const HeroImage = ({children}: Props) : JSX.Element => {
         className='object-cover blur-sm scale-105'
         alt="Holiday"
       />
-      <div className='z-10 font-bold absolute h-full w-full text-center items-center justify-center flex flex-col drop-shadow-lg'>
+      <div className='z-10 font-bold absolute h-full w-full text-center items-center justify-center flex flex-col'>
         {children}
       </div>
     </div>

@@ -8,7 +8,7 @@ const Countdown = ({ date }: Props) : JSX.Element => {
   const { days, hours, minutes, seconds } = useCountDown(date)
 
   return (
-    <div className='text-9xl font-bold absolute h-full w-full text-center items-center justify-center countdown flex'>
+    <div className='text-9xl countdown'>
       {days}:{hours}:{minutes}:{seconds}
     </div>
   )

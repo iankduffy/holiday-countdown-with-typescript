@@ -13,6 +13,7 @@ const Home: NextPage = () => {
         <title>Countdown to Holiday | Gran Canaria</title>
       </Head>
       <HeroImage >
+        <h1 className='header'>We Go to Gran Canaria</h1>
         <Countdown date={holidayDate}/>
       </HeroImage>
     </div>

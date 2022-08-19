@@ -11,10 +11,12 @@ const HeroImage = ({children}: Props) : JSX.Element => {
       <Image
         src={'/holiday-pic.jpeg'}
         layout='fill'
-        className='object-cover'
+        className='object-cover blur-sm scale-105'
         alt="Holiday"
       />
-      {children}
+      <div className='z-10 font-bold absolute h-full w-full text-center items-center justify-center flex flex-col drop-shadow-lg'>
+        {children}
+      </div>
     </div>
   )
 }

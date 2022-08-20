@@ -7,7 +7,47 @@ const spanishToEnglish = [
   {
     spanish: 'Hola', 
     english: 'Hello'
-  }
+  }, 
+  {
+    spanish: 'baño', 
+    english: 'bathroom'
+  },
+  {
+    spanish: 'Adiós', 
+    english: 'Goodbye'
+  },
+  {
+    spanish: 'Por favor', 
+    english: 'Please'
+  }, 
+  {
+    spanish: 'Lo siento', 
+    english: 'Sorry'
+  },
+  {
+    spanish: 'Buenos días', 
+    english: 'Good morning'
+  },
+  {
+    spanish: 'Buenas tardes', 
+    english: 'Good afternoon'
+  },
+  {
+    spanish: 'Buenas noches', 
+    english: 'Good evening'
+  },
+  {
+    spanish: 'Me llamo…', 
+    english: 'My name is…'
+  },
+  {
+    spanish: 'Mucho gusto', 
+    english: 'Nice to meet you'
+  },
+  {
+    spanish: 'Yo no comprendo', 
+    english: 'I do not understand'
+  },
 ]
 
 const BasicSpanish = ({}: Props) : JSX.Element => {

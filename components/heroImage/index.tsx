@@ -14,6 +14,7 @@ const HeroImage = ({children}: Props) : JSX.Element => {
         alt="Holiday"
         width={1512}
         height={835}
+        priority
       />
       <div className='z-10 font-bold absolute h-full w-full text-center items-center justify-center flex flex-col text-slate-50'>
         {children}

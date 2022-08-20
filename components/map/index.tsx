@@ -10,10 +10,10 @@ const center = {
   lng: -15.6053918
 }
 
-const Map = () => {
+const Map = () : JSX.Element => {
   return (
     <LoadScript
-      googleMapsApiKey={process.env.NEXT_PUBLIC_API_KEY_GOOGLE}
+      googleMapsApiKey={process.env.NEXT_PUBLIC_API_KEY_GOOGLE as string}
     >
       <GoogleMap
         mapContainerStyle={containerStyle}

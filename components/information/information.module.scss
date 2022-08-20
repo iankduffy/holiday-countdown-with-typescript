@@ -1,0 +1,8 @@
+
+.container {
+  @media (min-width: 700px) {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    gap: 4%;
+  }
+}

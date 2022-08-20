@@ -9,12 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@googlemaps/react-wrapper": "^1.1.35",
+    "@react-google-maps/api": "^2.12.1",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-google-maps": "^9.4.5",
     "sass": "^1.54.4"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.4",
     "@types/node": "18.7.3",
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",

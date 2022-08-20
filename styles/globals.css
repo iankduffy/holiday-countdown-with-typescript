@@ -30,7 +30,7 @@ a {
 } */
 
 .countdown {
-  font-size: clamp(4.5rem, -0.575rem + 8.333vw, 25.5rem)
+  font-size: clamp(3.5rem, -0.575rem + 8.333vw, 90vw)
 }
 
 .header {

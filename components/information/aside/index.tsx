@@ -7,9 +7,8 @@ interface Props {
 const Aside = ({}: Props) : JSX.Element => {
 
   return (
-    <div className=''>
+    <div className='sticky'>
       <MapComponent />
-      Contents
     </div>
   )
 }
